@@ -1,0 +1,780 @@
+:root{
+    --bg-color: #000000;
+    --red-color: #da0209;
+    --red-hover: #b00009;
+    --text-color: #fff;
+    --border-bottom: .5rem solid #232323;
+    --border: .1rem solid #939393;
+}
+html{
+    font-size: 65%;
+    scroll-behavior: smooth;
+}
+/* common css start */
+.common-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    padding: 50px 20px;
+}
+/* common css end */
+*{
+    color: var(--text-color);
+    text-transform: capitalize;
+    transition: .2s linear;
+    background-color: var(--bg-color);
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+.interface{
+    background: url(img/netflix-back.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.interface::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background: rgba(0,0,0,0.4);
+    box-shadow: inset 20px 50px 350px #000000;
+}
+
+.header {
+    position: absolute;
+    width: 97%;
+    margin: 0 auto;
+    margin-top: -10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    background-color: transparent;
+}
+
+.header img {
+    background-color: transparent;
+    width: 17vw;
+}
+
+.header a button {
+    padding: 6px 16px;
+    background-color: var(--red-color);
+    border-radius: 3px;
+    border: none; outline: none;
+}
+
+.header a button:hover {
+    background-color: var(--red-hover);
+}
+
+.header a {
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.sign-up {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+}
+.sign-up h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    background-color: transparent;
+}
+
+.sign-up h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 50px;
+    background-color: transparent;
+}
+
+.sign-up p {
+    font-size: 2.1rem;
+    font-weight: 600;
+    background-color: transparent;
+}
+
+.sign-up .sign-input {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    grid-gap: 5px;
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    margin-left: 23.5%;
+    background-color: transparent;
+}
+
+.sign-up input {
+    padding: 14px;
+    background-color: rgba(71, 71, 71, 0.2);
+    outline: none;
+    border: var(--border);
+    border-radius: 3px;
+    font-size: 1.7rem;
+}
+
+.sign-up input::placeholder {
+    color: #B7B8B9;
+}
+
+.sign-up button {
+    width: 75%;
+    background-color: var(--red-color);
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 3px;
+    padding: 10px 20px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    position: relative; 
+}
+
+.sign-up button::after {
+    content: '\003E';
+    font-size: 2rem; 
+    position: absolute;
+    right: 20px; 
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.sign-up button:hover {
+    background-color: var(--red-hover);
+    transform: scale(1.05);
+}
+
+.sign-up button:hover::after {
+    transform: translateY(-50%) translateX(5px);
+}
+
+.br-container {
+    background-color: #232323;
+    padding: 4px;
+    display: block;
+    content: "";
+}
+
+.br-container br {
+    display: none;
+}
+
+/* second interface start */
+.details {
+    padding: 0 10px;
+    background: transparent;
+}
+
+.details h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.details h5 {
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+.tv img {
+    width: 100%;
+    margin: 0 auto;
+    height: auto; 
+    display: block; 
+    background: transparent;
+}
+
+/* second interface end */
+
+/* third interface start */
+.box-card{
+    height: 15vh;
+    position: relative;
+    border: .2rem solid #5A5A5A;
+    width: 60%;
+    display: flex;
+    left: 20%;
+    margin-top: -20%;
+    border-radius: 10px;
+}
+
+.box-card img{
+    position: absolute;
+    width: 20%;
+    padding: 10px;
+    top: -2px;
+}
+
+.card-details{
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20%;
+}
+
+.card-details .download-text{
+    background-color: transparent;
+    text-align: left;
+}
+
+.card-details .download-text h6{
+    font-size: 1.5rem;
+    background-color: transparent;
+}
+
+.card-details .download-text p{
+    font-size: 1.2rem;
+    color: #006CEB;
+    background-color: transparent;
+}
+
+.card-details .load-icon{
+    position: absolute;
+    background-color: transparent;
+    left: 220%;
+}
+
+/* third interface end */
+
+/* forth interface start */
+.details-1 {
+    padding: 50px 120px;
+    margin-left: 7%;
+    background: transparent;
+}
+
+.details-1 h1 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.details-1 h5 {
+    font-size: 2.2rem;
+    font-weight: 500; 
+    width: 125%;
+}
+/* forth interface end */
+
+/* six interface start */
+.accordion {
+    display: block;
+    padding: 50px 0;
+    max-width: 1600px;
+    font-weight: 500;
+}
+.accordion .contentBox {
+    position: relative;
+    margin: 5px 20px;
+}
+.accordion .contentBox .label {
+    position: relative;
+    padding: 20px;
+    background-color: #232323;
+    color: var(--font-color);
+    cursor: pointer;
+    font-size: 2rem;
+    border-bottom: .5rem solid #000;
+}
+.accordion .contentBox .label::before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 3rem;
+}
+.accordion .contentBox.active .label::before {
+    content: "-";
+    font-size: 5rem;
+}
+.accordion .contentBox .content {
+    position: relative;
+    background-color: #414141;
+    color: var(--text-color);
+    height: 0;
+    overflow: hidden;
+    transition: .5s ;
+    overflow-y: auto;
+    font-size: 2rem;
+}
+.accordion .contentBox .content p {
+    margin: 20px 20px;
+    color: #000000;
+}
+.accordion .contentBox.active .content {
+    height: 150px;
+}
+
+.sign-ups {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.sign-ups p {
+    font-size: 2.1rem;
+    font-weight: 600;
+    background-color: transparent;
+}
+
+.sign-ups .sign-input {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    grid-gap: 5px;
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    margin-left: 23.5%;
+}
+
+.sign-ups input {
+    padding: 14px;
+    background-color: rgba(71, 71, 71, 0.2);
+    outline: none;
+    border: var(--border);
+    border-radius: 3px;
+    font-size: 1.7rem;
+}
+
+.sign-ups input::placeholder {
+    color: #B7B8B9;
+}
+
+.sign-ups button {
+    width: 75%;
+    background-color: var(--red-color);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    text-transform: capitalize;
+    border-radius: 3px;
+    padding: 10px 20px; 
+    cursor: pointer; 
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    position: relative; 
+}
+
+.sign-ups button::after {
+    content: '\003E';
+    font-size: 2rem; 
+    position: absolute;
+    right: 20px; 
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.sign-ups button:hover {
+    background-color: var(--red-hover);
+    transform: scale(1.05);
+}
+
+.sign-ups button:hover::after {
+    transform: translateY(-50%) translateX(5px);
+}
+/* six interface end */
+
+/* footer start */
+.footer {
+    background: #000;
+    cursor: crosshair;
+    overflow-x: hidden;
+    height: 60vh;
+    cursor: crosshair;
+}
+.footer .xtra {
+    margin-left: 3%;
+    padding-top: 15px;
+    font-size: 1.7rem;
+    color: var(--text-color);
+    cursor: crosshair;
+}
+
+.footer .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    width: 95%;
+    margin: 0 auto;
+    margin-top: -10%;
+    cursor: crosshair;
+}
+
+.footer .row .col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .row .col a {
+    font-size: 1.5rem;
+    color: #B3B3B3;
+    line-height: 30px;
+    cursor: crosshair;
+}
+
+.footer .row .server{
+    display: block;
+}
+.footer .row .server p{
+    font-size: 1.6rem;
+    color: #B3B3B3;
+}
+/* footer end */
+
+/* click event start */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(img/log-well.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 50px;
+    transition: 0s;
+
+}
+
+.modal::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0,0.3);
+    box-shadow: inset 20px 50px 350px #000000;
+}
+
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+    background: transparent;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.container {
+    height: 85vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    position: relative;
+}
+
+.model-container {
+    position: absolute;
+    margin: 0px auto;
+    padding: 30px 40px;
+    background-color: transparent;
+}
+
+.model-container h1 {
+    background-color: transparent;
+    font-size: 3rem;
+    padding-bottom: 30px;
+}
+
+.model-container .inputs {
+    padding: 18px 0;
+    width: 180%;
+    background-color: #131010d2;
+    outline: none;
+    margin-bottom: 20px;
+    border: var(--border);
+    border-radius: 3px;
+    padding-left: 20px;
+}
+
+.model-container input::placeholder {
+    font-size: 1.5rem;
+    color: #B7B8B9;
+}
+
+.clearfix {
+    background-color: transparent;
+    text-align: center;
+    width: 180%;
+}
+
+.clearfix button {
+    width: 100%;
+    padding: 8px 0;
+    margin-bottom: 20px;
+    border: none; outline: none;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.clearfix button:nth-child(1) {
+    background-color: var(--red-color);
+}
+.clearfix button:nth-child(3) {
+    background-color: #b7b8b94a;
+}
+
+.clearfix h3{
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #e6e7e8;
+}
+
+.clearfix p {
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.clearfix p:hover {
+    text-decoration: underline;
+    color: #B3B3B3;
+}
+
+.container label {
+    background-color: transparent;
+    display: flex;
+    font-size: 1.3rem;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    width: 17px; 
+    height: 17px; 
+    background-color: rgb(0, 0, 0); 
+    border: .5px solid rgb(255, 255, 255);
+    border-radius: 4px; 
+    display: inline-block;
+    vertical-align: middle; 
+    margin-right: 10px; 
+}
+
+input[type="checkbox"]:checked {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    position: relative;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    width: 4px;
+    height: 9px;
+    border: solid black;
+    border-width: 0 1.5px 1.5px 0;
+    transform: rotate(45deg);
+}
+
+.container .New-to-Netflix {
+    background-color: transparent;
+    font-size: 1.4rem;
+    color: #aaaaaa;
+    font-weight: 500;
+}
+.container .New-to-Netflix a {
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--text-color);
+}
+/* click event end */
+
+
+@media screen and (max-width: 991px){
+    html{
+        font-size: 60%;
+    }
+}
+@media screen and (max-width: 768px){
+    html{
+        font-size: 55%;
+    }
+
+/* common css start */
+   .common-grid {
+        grid-template-columns: 1fr;
+        gap: 10px; 
+    }
+/* common css end */
+
+/* header start */
+.header {
+    margin-top: 10px;
+}
+
+.sign-up {
+    padding: 20px;
+}
+
+.sign-up h1 {
+    font-size: 3.5rem;
+}
+
+.sign-up p {
+    font-size: 2rem;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.sign-up .sign-input {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sign-up button {
+    width: 75%;
+    margin: 0 auto;
+}
+/* header end */
+
+/* tv start */
+   .details, .tv {
+        text-align: center;
+    }
+
+    .details h1 {
+        font-size: 3.5rem;
+   }
+
+    .details h5 {
+        font-size: 2rem;
+        font-weight: 500;
+   }
+
+/* tv end */
+
+/* third interface start */
+.box-card{
+    width: 80%;
+    left: 10%;
+}
+
+.box-card img{
+    width: 30%;
+}
+
+.card-details{
+    margin-left: 30%;
+}
+
+.card-details .load-icon{
+    left: 160%;
+}
+/* third interface end */
+
+/* forth interface start */
+.details-1 {
+    padding: 50px 0;
+    margin-left: 0;
+    text-align: center;
+}
+
+.details-1 h1 {
+    font-size: 3rem;
+}
+
+.details-1 h5 {
+    font-size: 2rem;
+    width: 100%;
+}
+/* forth interface end */
+
+/* five start */
+.sign-ups {
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.sign-ups p {
+    font-size: 2rem;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.sign-ups .sign-input {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sign-ups button {
+    width: 75%;
+    margin: 0 auto;
+}
+
+/* click event start */
+.model-container {
+    margin-left: 10%;
+}
+.close {
+    right: 15px;
+    top: 0px;
+}
+/* click event end */
+
+}
+
+@media screen and (max-width: 441px) {
+    .container {
+        background-color: transparent;
+    }
+    .model-container {
+        margin-left: -2%;
+    }
+}

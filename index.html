@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix.Clone</title>
+    <link rel="stylesheet" href="netflix.css">
+<!-- font awesome -->
+<script src="https://kit.fontawesome.com/26acb014a1.js" crossorigin="anonymous"></script>
+<!-- font awesome -->
+<!-- bootstrap -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- bootstrap -->
+<!-- bootstrap icon -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- bootstrap icon -->
+</head>
+<body>
+<!-- interface start -->
+<div class="interface">
+    <nav class="header">
+        <img src="img/netflix-logo-removebg-preview.png" alt="error404">
+        <a href="#"><button onclick="document.getElementById('id01').style.display='block'">sign in</button></a>
+    </nav>
+    <div class="sign-up">
+        <h1>Unlimited movies, TV shows, and more</h1>
+        <h4>Watch anywhere. Cancel anytime.</h4>
+        <p>Ready to watch? Enter your email to create or restart your membership.</p>
+        <br><br>
+        <div class="sign-input">
+            <input type="email" placeholder="Email Address">
+            <button>get started</button>
+        </div>
+    </div>
+</div>
+
+<!-- click event start -->
+<div id="id01" class="modal">
+    
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+    <div class="container">
+        <div class="model-container">
+            <h1>Sign In</h1>
+            <form action="/path_to_your_backend" method="get" style="background-color: transparent;">
+                <input class="inputs" type="text" placeholder="Enter Email" name="email" required>
+                <br>
+                <input class="inputs" type="password" placeholder="Enter Password" name="psw" required>
+                
+                <div class="clearfix">
+                    <button type="submit">Sign In</button>
+                    <h3>OR</h3>
+                    <button type="button" class="signupbtn">Use a Sign-In Code</button>
+                    <p>Forgot password?</p>
+                </div>
+        
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+        
+                <br>
+        
+                <p class="New-to-Netflix">New to Netflix? <a href="#"> Sign up now.</a></p>
+            </form>
+        </div>
+    </div>
+
+</div>
+<!-- click event end -->
+
+<!-- interface end -->
+
+<br class="br-container">
+
+<!-- second interface start -->
+<div class="common-grid">
+ <div class="details">
+    <h1>Enjoy on your TV</h1>
+    <h5>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</h5>
+ </div>
+ <div class="tv">
+    <img src="img/tv.png" alt="error404">
+ </div>
+</div>
+<!-- second interface end -->
+
+<br class="br-container">
+
+<!-- third interface start -->
+<div class="common-grid">
+    <div class="tv">
+        <img src="img/mobile-0819.jpg" alt="error404">
+        <div class="card-body box-card">
+            <img src="img/boxshot.png"></img>
+            <div class="card-details">
+                <div class="download-text">
+                    <h6>Stranger Things</h6>
+                    <p>Downloading...</p>
+                </div>
+                <div class="spinner-border text-primary load-icon">
+                </div>
+            </div>
+        </div>
+     </div>
+    <div class="details" style="  margin-top: 20px;">
+       <h1>Download your shows to watch offline</h1>
+       <h5>Save your favorites easily and always have something to watch.</h5>
+    </div>
+</div>
+<!-- third interface end -->
+
+<br class="br-container">
+
+<!-- forth interface start -->
+<div class="common-grid">
+    <div class="details-1">
+       <h1>Watch everywhere</h1>
+       <h5>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</h5>
+    </div>
+</div>
+<!-- forth interface end -->
+
+<br class="br-container">
+
+<!-- five interface start -->
+<div class="common-grid">
+    <div class="tv">
+        <img src="img/kids.png" alt="error404">
+    </div>
+    <div class="details">
+       <h1>Create profiles for kids</h1>
+       <h5>Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</h5>
+    </div>
+</div>
+<!-- five interface end -->
+
+<br class="br-container">
+
+<!-- six interface start -->
+<div class="accordion">
+    <div class="contentBox">
+        <div class="label">question-1</div>
+        <div class="content">
+
+        </div>
+    </div>
+    <div class="contentBox">
+        <div class="label">question-2</div>
+        <div class="content">
+
+        </div>
+    </div>
+    <div class="contentBox">
+        <div class="label">question-3</div>
+        <div class="content">
+
+        </div>
+    </div>
+    <div class="contentBox">
+        <div class="label">question-4</div>
+        <div class="content">
+
+        </div>
+    </div>
+    <div class="contentBox">
+        <div class="label">question-5</div>
+        <div class="content">
+
+        </div>
+    </div>
+    <div class="contentBox">
+        <div class="label">question-6</div>
+        <div class="content">
+
+        </div>
+    </div>
+</div>
+
+<div class="sign-ups">
+   <p>Ready to watch? Enter your email to create or restart your membership.</p>
+    <br><br>
+    <div class="sign-input">
+        <input type="email" placeholder="Email Address">
+        <button>get started</button>
+    </div>
+</div>
+<!-- six interface end -->
+
+<br class="br-container">
+
+<!-- footer start -->
+<div class="footer row">
+    <a href="#" class="xtra">Questions? Contact us.</a>
+    <div class="row">
+      <div class="col">
+        <a href="#">FAQ</a>
+        <a href="#">Investor Relations</a>
+        <a href="#">Privacy</a>
+        <a href="#">Speed Test</a>
+      </div>
+      <div class="col">
+        <a href="#">Help Center</a>
+        <a href="#">Jobs</a>
+        <a href="#">Cookie Preferences</a>
+        <a href="#">Legal Notices</a>
+      </div>
+      <div class="col">
+        <a href="#">Account</a>
+        <a href="#">Ways to Watch</a>
+        <a href="#">Corporate Information</a>
+        <a href="#">Only on Netflix</a>
+      </div>
+      <div class="col">
+        <a href="#">Media Center</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="server">
+        <p>language - English</p>
+        <p>Netflix Bangladesh</p>
+      </div>
+    </div>
+</div>
+<!-- footer end -->
+
+<script src="netflix.js"></script>
+</body>
+</html>
